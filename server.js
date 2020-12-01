@@ -19,6 +19,7 @@ if (process.env.NODE_ENV !== 'production') {
   
   const users = []
   
+  app.use(express.static(__dirname + "/public"))
   app.set('view-engine', 'ejs')
   app.use(express.urlencoded({ extended: false }))
   app.use(flash())
